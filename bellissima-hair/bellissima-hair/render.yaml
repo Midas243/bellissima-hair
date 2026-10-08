@@ -1,0 +1,26 @@
+# Déploiement sur Render.com (Blueprint)
+services:
+  - type: web
+    name: bellissima-hair
+    runtime: node
+    plan: starter            # un disque persistant exige un plan payant
+    buildCommand: "echo 'aucune dépendance à installer'"
+    startCommand: node server/index.js
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: TRUST_PROXY
+        value: "1"
+      - key: DATA_DIR
+        value: /var/data
+      - key: ADMIN_EMAIL
+        sync: false          # à renseigner dans le tableau de bord
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: SECRET
+        generateValue: true
+    disk:
+      name: bellissima-data
+      mountPath: /var/data
+      sizeGB: 1

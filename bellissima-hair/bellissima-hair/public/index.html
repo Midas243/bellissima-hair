@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bellissima Hair — La beauté, connectée</title>
+  <meta name="description" content="Bellissima Hair réunit les femmes, les tresseuses, les salons et les boutiques de produits capillaires sur une même plateforme. Kinshasa, RDC.">
+  <meta name="theme-color" content="#8B2252">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Serif:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <a class="skip" href="#app">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="container bar">
+      <a class="brand" href="#/" aria-label="Bellissima Hair — accueil">
+        <span class="brand-mark" aria-hidden="true">B</span>
+        <span class="brand-name">Bellissima <span>Hair</span></span>
+      </a>
+      <nav id="main-nav" class="main-nav" aria-label="Navigation principale">
+        <a href="#/services" data-nav="services">Services</a>
+        <a href="#/boutique" data-nav="boutique">Boutique</a>
+        <a href="#/professionnelles" data-nav="professionnelles">Professionnelles</a>
+        <a href="#/communaute" data-nav="communaute">Communauté</a>
+      </nav>
+      <div class="bar-actions">
+        <a class="cart-link" href="#/panier" aria-label="Panier">🛍️<span id="cart-count" class="cart-count" hidden>0</span></a>
+        <a id="auth-link" class="btn btn-primary btn-sm" href="#/connexion">Rejoindre</a>
+        <button class="menu-btn" data-action="toggle-menu" aria-expanded="false" aria-controls="main-nav">Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">Bellissima <span>Hair</span></p>
+        <p class="footer-text">Une plateforme pensée pour les femmes.<br>Beauté, confiance, élégance.</p>
+        <a class="btn btn-light btn-sm" href="#/services">Découvrir</a>
+      </div>
+      <div>
+        <h2>Plateforme</h2>
+        <a href="#/services">Services</a>
+        <a href="#/boutique">Boutique</a>
+        <a href="#/communaute">Communauté</a>
+      </div>
+      <div>
+        <h2>Professionnelles</h2>
+        <a href="#/inscription?role=tresseuse">Tresseuses</a>
+        <a href="#/inscription?role=salon">Salons</a>
+        <a href="#/inscription?role=magasin">Magasins</a>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <a href="#/contact">Devenir partenaire</a>
+        <a href="#/contact">Nous écrire</a>
+        <a href="#/faq">FAQ</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">Kinshasa, RDC · Projet 2026</div>
+  </footer>
+
+  <div id="toasts" class="toasts" role="status" aria-live="polite"></div>
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>
